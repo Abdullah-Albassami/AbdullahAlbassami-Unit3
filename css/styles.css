@@ -44,17 +44,36 @@ nav ul {
     padding: 0;
 }
 
-nav a {
+nav a,
+footer a {
     color: white;
+}
+
+nav a {
     text-decoration: none;
 }
 
-#hero {
+#hero,
+#about {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 2rem;
     padding: 4rem 2rem;
+}
+
+#hero {
+    justify-content: space-between;
+}
+
+.hero-image {
+    animation: fadeIn 3s ease-out;
+    flex: 1;
+}
+
+
+.about-image,
+.about-text {
+    flex: 1;
 }
 
 @keyframes fadeIn {
@@ -69,15 +88,11 @@ nav a {
 
 .hero-text {
     flex: 1;
-    
-    animation: fadeIn 1s ease-in;
-}
-
-.hero-image {
-    flex: 1;
 }
 
 .hero-image img {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
     transition: transform 0.3s;
 }
 
@@ -90,14 +105,17 @@ nav a {
     color: var(--dark-color);
 }
 
-.hero-text a {
-    display: inline-block;
-    margin-top: 1rem;
+.hero-text a,
+footer button {
     padding: 0.8rem 1.5rem;
     background-color: var(--primary-color);
     color: white;
-    text-decoration: none;
+}
 
+.hero-text a {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
     transition: background-color 0.3s;
 }
 
@@ -107,6 +125,7 @@ nav a {
 
 #services {
     padding: 4rem 2rem;
+    animation: slideIn 1.5s ease;
 }
 
 #services h2 {
@@ -134,7 +153,6 @@ nav a {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 0.5rem;
-
     transition: transform 0.3s;
 }
 
@@ -154,25 +172,9 @@ nav a {
     }
 }
 
-#about {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding: 4rem 2rem;
-
-    animation: slideIn 1s ease-in;
-}
-
-.about-image {
-    flex: 1;
-}
-
-.about-text {
-    flex: 1;
-}
-
 footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 2rem;
     padding: 4rem 2rem;
@@ -180,12 +182,12 @@ footer {
     color: white;
 }
 
-.contact-info {
+.contact-info,
+footer form {
     flex: 1;
 }
 
 footer form {
-    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
@@ -202,15 +204,14 @@ footer textarea {
 }
 
 footer button {
-    padding: 0.8rem 1.5rem;
-    background-color: var(--primary-color);
-    color: white;
     border: none;
     cursor: pointer;
 }
 
-footer a {
-    color: white;
+.copyright {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 1rem;
 }
 
 @media (max-width: 768px) {
